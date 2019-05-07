@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ProjetoEF.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Listar Funcionário</h2>
+<hr />
+<a asp-action="Cadastrar" asp-controller="Funcionario" class="btn btn-success">Criar novo Funcionário</a>
+
+<hr />
+
+
+<table id="categorias" class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Salário</th>
+            <th>Cpf</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dados in Model)
+        {
+        <tr>
+            <td>@dados.id</td>
+            <td>@dados.nome</td>
+            <td>@dados.salario</td>
+            <td>@dados.cpf</td>
+            <td>
+                <a class="btn btn-primary" href="/Funcionario/Editar/@dados.id">Editar</a>
+                <a class="btn btn-danger" href="/Funcionario/Deletar/@dados.id">Deletar</a>
+          </tr>
+        }
+
+    </tbody>
+
+</table>
