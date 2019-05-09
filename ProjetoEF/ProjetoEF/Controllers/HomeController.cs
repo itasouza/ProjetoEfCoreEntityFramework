@@ -59,12 +59,19 @@ namespace ProjetoEF.Controllers
             database.SaveChanges();
             */
 
-            var listaDeCategorias = database.Categoria.Where(cat => cat.nome.Equals("itamar")).ToList();
+
+            //Lista usando uma condição
+            //var listaDeCategorias = database.Categoria.Where(cat => cat.nome.Equals("itamar")).ToList();
+
+          
+
+            // lista todos os dados
+            var listaDeCategorias = database.Categoria.ToList();
             Console.WriteLine("================categorias==============");
 
-            listaDeCategorias.ForEach(cate =>
+            listaDeCategorias.ForEach(Categoria =>
             {
-                Console.WriteLine(cate.ToString());
+                Console.WriteLine(Categoria.ToString());
             });
             Console.WriteLine("================categorias==============");
 
