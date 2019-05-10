@@ -10,23 +10,27 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
 
     <style>
+
       .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
       }
 
       @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+          }
+       }
+
+
     </style>
     <!-- Custom styles for this template -->
     <link href="css/form-validation.css" rel="stylesheet">
@@ -42,10 +46,8 @@
     </div>
 
   <div class="row">
-
-
     <div class="col-md-12 order-md-1">
-      <h4 class="mb-3">Endereço de cobrança</h4>
+      <h4 class="mb-3">Formulário padrão</h4>
 
       <form class="needs-validation" novalidate>
         <div class="row">
@@ -204,7 +206,7 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue para o checkout</button>
+        <button class="btn btn-primary btn-lg" id="btnGravar" type="submit">Continue para o checkout</button>
       </form>
 
     </div>
@@ -220,8 +222,43 @@
   </footer>
 
 </div>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
       <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
       <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/form-validation.js"></script></body>
+      <script src="js/form-validation.js"></script>
+      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+      
+
+</body>
+
+
+     <script>
+
+       function addClasses() {
+          $(".bg-light").each(function(){
+              var scre = $("body").width();
+              if ( scre <= 768 ) {
+                  $("#btnGravar").addClass("btn-block");
+              } else{
+                  $("#btnGravar").removeClass("btn-block");
+              }
+              
+           });
+         }
+
+          $(document).ready(function () {
+              // Adicionar classes ao carregar o documento
+              addClasses();
+
+              $(window).resize(function() {
+                  // Adicionar sempre que a tela for redimensionada
+                  addClasses();
+              });
+          });
+      </script>   
+
+
 </html>
