@@ -1,121 +1,102 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Exemplo </title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Exemplo </title>
 
-    <style>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+  <link href="css/form-customizado.css" rel="stylesheet">
+  <link href="css/form-validation.css" rel="stylesheet">
 
-      .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-      }
-
-      @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-              font-size: 3.5rem;
-          }
-       }
+</head>
 
 
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="css/form-validation.css" rel="stylesheet">
-  </head>
+<body class="bg-light">
 
-
-  <body class="bg-light">
-
-    <div class="container">
+  <div class="container">
 
     <div class="py-5 text-center">
-        <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <img class="d-block mx-auto mb-4" src="assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
     </div>
 
-  <div class="row">
-    <div class="col-md-12 order-md-1">
-      <h4 class="mb-3">Formulário padrão</h4>
+    <div class="row">
+      <div class="col-md-12 order-md-1">
+        <h4 class="mb-3">Formulário padrão</h4>
 
-      <form class="needs-validation" novalidate>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="firstName">Primeiro nome</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+        <form class="needs-validation" novalidate>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="firstName">Primeiro nome</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                O primeiro nome válido é obrigatório.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="lastName">Último nome</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                O sobrenome válido é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="username">Nome de usuário</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input type="text" class="form-control" id="username" placeholder="Nome usuário" required>
+              <div class="invalid-feedback" style="width: 100%;">
+                Seu nome de usuário é obrigatório.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email">Email <span class="text-muted">(opcional)</span></label>
+            <input type="email" class="form-control" id="email" placeholder="seuemail@example.com">
             <div class="invalid-feedback">
-              O primeiro nome válido é obrigatório.
+              Por favor, insira um endereço de e-mail válido para atualizações de envio.
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Último nome</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+
+          <div class="mb-3">
+            <label for="address">Endereço</label>
+            <input type="text" class="form-control" id="address" placeholder="Rua Brasil 123" required>
             <div class="invalid-feedback">
-              O sobrenome válido é obrigatório.
+              Por favor insira seu endereço de entrega.
             </div>
           </div>
-        </div>
 
-        <div class="mb-3">
-          <label for="username">Nome de usuário</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">@</span>
-            </div>
-            <input type="text" class="form-control" id="username" placeholder="Nome usuário" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Seu nome de usuário é obrigatório.
-            </div>
+          <div class="mb-3">
+            <label for="address2">Endereço 2 <span class="text-muted">(opcional)</span></label>
+            <input type="text" class="form-control" id="address2" placeholder="Apartamento ou suite">
           </div>
-        </div>
 
-        <div class="mb-3">
-          <label for="email">Email <span class="text-muted">(opcional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="seuemail@example.com">
-          <div class="invalid-feedback">
-            Por favor, insira um endereço de e-mail válido para atualizações de envio.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address">Endereço</label>
-          <input type="text" class="form-control" id="address" placeholder="Rua Brasil 123" required>
-          <div class="invalid-feedback">
-            Por favor insira seu endereço de entrega.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address2">Endereço 2 <span class="text-muted">(opcional)</span></label>
-          <input type="text" class="form-control" id="address2" placeholder="Apartamento ou suite">
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 mb-3">
-            <label for="country">País</label>
-            <select class="custom-select d-block w-100" id="country" required>
+          <div class="row">
+            <div class="col-md-5 mb-3">
+              <label for="country">País</label>
+              <select class="custom-select d-block w-100" id="country" required>
               <option value="">Escolha...</option>
               <option>Brasil</option>
             </select>
-            <div class="invalid-feedback">
-              Por favor, selecione um país válido.
+              <div class="invalid-feedback">
+                Por favor, selecione um país válido.
+              </div>
             </div>
-          </div>
 
-          <div class="col-md-4 mb-3">
-            <label for="state">Estado</label>
-            <select class="custom-select d-block w-100" id="state" required>
+            <div class="col-md-4 mb-3">
+              <label for="state">Estado</label>
+              <select class="custom-select d-block w-100" id="state" required>
               <option value="">Escolha...</option>
                 <option>Paraíba (PB)</option>
                 <option>Paraná (PR)</option>
@@ -131,134 +112,110 @@
                 <option>Sergipe (SE)</option>
                 <option>Tocantins (TO)</option>
             </select>
-            <div class="invalid-feedback">
-              Por favor, forneça um estado válido.
+              <div class="invalid-feedback">
+                Por favor, forneça um estado válido.
+              </div>
+            </div>
+
+            <div class="col-md-3 mb-3">
+              <label for="zip">CEP</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <div class="invalid-feedback">
+                CEP requerido.
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="same-address">
+            <label class="custom-control-label" for="same-address">O endereço de envio é o mesmo que o meu endereço de faturamento</label>
+          </div>
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="save-info">
+            <label class="custom-control-label" for="save-info">Guarde esta informação para a próxima vez</label>
+          </div>
+          <hr class="mb-4">
+
+          <h4 class="mb-3">Payment</h4>
+
+          <div class="d-block my-3">
+            <div class="custom-control custom-radio">
+              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+              <label class="custom-control-label" for="credit">Cartão de crédito</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" for="debit">Cartão de débito</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+              <label class="custom-control-label" for="paypal">PayPal</label>
             </div>
           </div>
 
-          <div class="col-md-3 mb-3">
-            <label for="zip">CEP</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
-            <div class="invalid-feedback">
-              CEP requerido.
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Nome no cartão</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required>
+              <small class="text-muted">Nome completo conforme exibido no cartão</small>
+              <div class="invalid-feedback">
+                Nome no cartão é obrigatório
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cc-number">Número do Cartão de Crédito</label>
+              <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <div class="invalid-feedback">
+                O número do cartão de crédito é obrigatório
+              </div>
             </div>
           </div>
-        </div>
-        <hr class="mb-4">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="same-address">
-          <label class="custom-control-label" for="same-address">O endereço de envio é o mesmo que o meu endereço de faturamento</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="save-info">
-          <label class="custom-control-label" for="save-info">Guarde esta informação para a próxima vez</label>
-        </div>
-        <hr class="mb-4">
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <label for="cc-expiration">Expiração</label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+              <div class="invalid-feedback">
+                Data de expiração exigida
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="cc-cvv">CVV</label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+              <div class="invalid-feedback">
+                Código de segurança requerido
+              </div>
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg" id="btnGravar" type="submit">Continue para o checkout</button>
+        </form>
 
-        <h4 class="mb-3">Payment</h4>
-
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-            <label class="custom-control-label" for="credit">Cartão de crédito</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Cartão de débito</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="cc-name">Nome no cartão</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-            <small class="text-muted">Nome completo conforme exibido no cartão</small>
-            <div class="invalid-feedback">
-              Nome no cartão é obrigatório
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="cc-number">Número do Cartão de Crédito</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            <div class="invalid-feedback">
-             O número do cartão de crédito é obrigatório
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiração</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-            <div class="invalid-feedback">
-             Data de expiração exigida
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-            <div class="invalid-feedback">
-              Código de segurança requerido
-            </div>
-          </div>
-        </div>
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg" id="btnGravar" type="submit">Continue para o checkout</button>
-      </form>
-
+      </div>
     </div>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2017-2019 Formulário Padrão</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacidade</a></li>
+        <li class="list-inline-item"><a href="#">Termos</a></li>
+        <li class="list-inline-item"><a href="#">Apoio, suporte</a></li>
+      </ul>
+    </footer>
+
   </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017-2019 Formulário Padrão</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacidade</a></li>
-      <li class="list-inline-item"><a href="#">Termos</a></li>
-      <li class="list-inline-item"><a href="#">Apoio, suporte</a></li>
-    </ul>
-  </footer>
-
-</div>
-
-      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-      <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/form-validation.js"></script>
-      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-      <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-      <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
-      
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <script src="js/form-dataTables.js"></script>
+  <script src="js/form-ajustabtn.js"></script>
 
 </body>
-
-
-     <script>
-
-       function addClasses() {
-          $(".bg-light").each(function(){
-              var scre = $("body").width();
-              if ( scre <= 768 ) {
-                  $("#btnGravar").addClass("btn-block");
-              } else{
-                  $("#btnGravar").removeClass("btn-block");
-              }
-              
-           });
-         }
-
-          $(document).ready(function () {
-              // Adicionar classes ao carregar o documento
-              addClasses();
-
-              $(window).resize(function() {
-                  // Adicionar sempre que a tela for redimensionada
-                  addClasses();
-              });
-          });
-      </script>   
-
 
 </html>
