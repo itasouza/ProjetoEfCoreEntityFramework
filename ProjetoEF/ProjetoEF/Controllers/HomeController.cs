@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjetoEF.Database;
 using ProjetoEF.Models;
 
@@ -60,7 +61,7 @@ namespace ProjetoEF.Controllers
             */
 
 
-            //Lista usando uma condição
+            //Lista usando uma condição where
             //var listaDeCategorias = database.Categoria.Where(cat => cat.nome.Equals("itamar")).ToList();
 
           
@@ -76,6 +77,49 @@ namespace ProjetoEF.Controllers
             Console.WriteLine("================categorias==============");
 
             return Content("Dados salvos");
+        }
+
+
+
+        public IActionResult Relacionamento()
+        {
+            /*
+            Produto p = new Produto();
+            p.Nome = "Doritos";
+            p.Categoria = database.Categoria.First(c => c.id == 1);
+
+            Produto p2 = new Produto();
+            p2.Nome = "Frango";
+            p2.Categoria = database.Categoria.First(c => c.id == 1);
+
+            Produto p3 = new Produto();
+            p3.Nome = "Bolo";
+            p3.Categoria = database.Categoria.First(c => c.id == 2);
+
+            database.Add(p);
+            database.Add(p2);
+            database.Add(p3);
+            database.SaveChanges();
+            */
+
+            /*
+            //consulta usando include
+            var listaDeProdutos = database.Produtos.Include(p => p.Categoria).ToList();
+            listaDeProdutos.ForEach(produto => {
+                    Console.WriteLine(produto.ToString());
+            });*/
+
+            var listaDeProdutosDeUmaCategoria = database.Produtos.Include(p => p.Categoria).Where(p => p.Categoria.id == 1).ToList();
+
+            listaDeProdutosDeUmaCategoria.ForEach(produto =>
+            {
+                Console.WriteLine(produto.ToString());
+            });
+
+
+
+
+            return Content("Relacionamento");
         }
 
 

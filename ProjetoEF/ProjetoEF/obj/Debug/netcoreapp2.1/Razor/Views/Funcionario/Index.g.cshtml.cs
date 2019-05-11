@@ -65,7 +65,7 @@ using ProjetoEF.Models;
             WriteLiteral("\r\n<h2>Listar Funcionário</h2>\r\n<hr />\r\n");
             EndContext();
             BeginContext(132, 105, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9df278cd73894b838efd8d3cdaa78642", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e769d4e85c904e9187abef2e460d2b2d", async() => {
                 BeginContext(211, 22, true);
                 WriteLiteral("Criar novo Funcionário");
                 EndContext();

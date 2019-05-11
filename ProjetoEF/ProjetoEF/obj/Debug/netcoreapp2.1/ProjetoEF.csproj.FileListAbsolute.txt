@@ -14,6 +14,8 @@ C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.TagHelpers.input.cache
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.TagHelpers.output.cache
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.RazorCoreGenerate.cache
+C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Cadastrar.g.cshtml.cs
+C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Index.g.cshtml.cs
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
@@ -30,5 +32,3 @@ C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.dll
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.pdb
 C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\ProjetoEF.csproj.CopyComplete
-C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Cadastrar.g.cshtml.cs
-C:\GitHub\ProjetoEfCoreEntityFramework\ProjetoEF\ProjetoEF\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Index.g.cshtml.cs
