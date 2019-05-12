@@ -23,3 +23,11 @@
         font-size: 3.5rem;
     }
 }
+
+.bg-light {
+    background-color:#dee2e6!important;
+}
+
+.nav-link{
+    color: #100f0f!important;
+}
