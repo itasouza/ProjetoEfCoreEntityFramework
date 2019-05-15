@@ -1,0 +1,104 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Exemplo </title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+  <link href="css/form-customizado.css" rel="stylesheet">
+  <link href="css/form-validation.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+
+<body class="bg-light">
+
+	<button class="ajax-get">Consultar GET</button>
+	<form class="ajax-post" method="POST" action="https://cors-test.appspot.com/test">
+		<input type="text" name="name" />
+		<input type="text" name="user" />
+		<button type="submit">Postar</button>
+	</form>
+
+	<div class="results"></div>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			$(".ajax-get").click(function() {
+				$.ajax({
+					type: "GET",
+					url: "https://www.google.com"
+				}).done(function(data) {
+					console.info(data);
+					$(".results").html("<p>" + data["status"] + "</p>");
+				}).fail(function(error) {
+					console.info(error);
+					$(".results").html("<p>Ocorreu um erro</p>");
+				});
+			});
+  
+			$(".ajax-post").submit(function(e) {
+				var form = $(this);
+				e.preventDefault();
+				$.ajax({
+					type: $(form).attr("method"),
+					url: $(form).attr("action"),
+					data: $(form).serialize()
+				}).done(function(data) {
+					console.info(data);
+					$(".results").append("<p>" + data["status"] + "</p>");
+				});
+			});
+		});
+	</script>
+
+
+
+	<input type="text" name="cep" placeholder="CEP" />
+	<button class="ajax-cep">Consultar</button>
+	<input type="text" name="logradouro" placeholder="Logradouro" />
+	<input type="text" name="complemento" placeholder="Complemento" />
+	<input type="text" name="bairro" placeholder="Bairro" />
+	<input type="text" name="localidade" placeholder="Localidade" />
+	<input type="text" name="uf" placeholder="UF" />
+
+	<script type="text/javascript">
+		$(function() {
+			$(".ajax-cep").click(function() {
+				var cep = $("[name='cep']").val();
+				if (cep != null && cep != "" && cep.length == 8) {
+					$.ajax({
+						type: "GET",
+						url: "//viacep.com.br/ws/" + cep + "/json/unicode/"
+					}).done(function(data) {
+						console.info(data);
+						if (data["erro"] != null && data["erro"] == true) {
+							alert("CEP inválido");
+						} else {
+							$("[name='logradouro']").val(data["logradouro"]);
+							$("[name='complemento']").val(data["complemento"]);
+							$("[name='bairro']").val(data["bairro"]);
+							$("[name='localidade']").val(data["localidade"]);
+							$("[name='uf']").val(data["uf"]);
+						}
+					}).fail(function(error) {
+						console.info(error);
+						alert("Ocorreu um erro");
+					});
+				}
+			});
+		});
+	</script>
+
+
+</body>
+
+</html>
